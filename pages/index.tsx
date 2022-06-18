@@ -54,8 +54,8 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer className="flex justify-between items-end w-full">
-        <div className="flex flex-col space-y-8 pl-12">
+      <footer className="flex justify-between items-end w-full absolute bottom-0 pb-2">
+        <div className="flex flex-col space-y-8 pl-12 pb-4">
        <div className="flex justify-evenly">
          <Image className="ml-4" src={facebook} alt="facebook"/>
          <Image className="ml-4" src={twitter} alt="twitter"/>
