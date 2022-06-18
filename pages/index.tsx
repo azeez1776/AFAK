@@ -3,6 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
 import brand from "../public/brand.png";
+import facebook from '../public/facebook.svg'
+import insta from '../public/insta.svg'
+import twitter from '../public/twitter.svg'
+import pattern2 from '../public/pattern2.png'
 
 const Home: NextPage = () => {
   return (
@@ -50,17 +54,16 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+      <footer className="flex justify-between items-end w-full">
+        <div className="flex flex-col space-y-8 pl-12">
+       <div className="flex justify-evenly">
+         <Image className="ml-4" src={facebook} alt="facebook"/>
+         <Image className="ml-4" src={twitter} alt="twitter"/>
+         <Image className="ml-4" src={insta} alt="instagram"/>
+       </div>
+       <p className="text-black/50 text-xs">&copy; 2022 AFAK TANZANIA COMPANY LTD</p>
+        </div>
+        <Image src={pattern2} alt="pattern" width={150} height={220} />
       </footer>
     </div>
   );
