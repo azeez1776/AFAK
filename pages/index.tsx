@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
       <main>
         <Header />
-        <div className="flex justify-between w-11/12">
+        <div className="flex justify-between w-11/12 items-start">
           <Image src={brand} alt="brand" width={350} height={200} />
           <div className="flex flex-col space-y-8">
             <div className="flex flex-col space-y-2">
