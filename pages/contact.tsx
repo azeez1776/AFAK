@@ -3,11 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/Header";
+import Footer from "../components/Footer"
 import brand from "../public/brand.png";
-import facebook from "../public/facebook.svg";
-import insta from "../public/insta.svg";
-import twitter from "../public/twitter.svg";
-import pattern2 from "../public/pattern2.png";
 
 const Contact: NextPage = () => {
   return (
@@ -22,7 +19,7 @@ const Contact: NextPage = () => {
         <Header />
         <div className="flex justify-between items-start w-11/12">
           <Image src={brand} alt="brand" width={350} height={200} />
-          <div className="flex flex-col space-y-8 w-2/5">
+          <div className="flex flex-col space-y-8 w-3/5">
             <div className="flex flex-row">
               <div className="border-t-2 border-blue w-8 h-1 my-auto mx-2"></div>
               <p className="text-blue text-sm">Get in Touch</p>
@@ -46,7 +43,7 @@ const Contact: NextPage = () => {
               />
             </div>
             <div className="flex justify-center items-center">
-              <button className="bg-blue text-white w-36 h-12 flex justify-center items-center rounded-full">
+              <button onClick={() => console.log("Sent")} className="bg-blue text-white w-36 h-12 flex justify-center items-center rounded-full">
                 Submit
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -66,10 +63,9 @@ const Contact: NextPage = () => {
             </div>
           </div>
         </div>
-      </main>
-      <div className="flex justify-center h-24 items-center">
+      <div className="flex justify-center items-center cursor-pointer">
           <Link href="/about">
-        <button className=" text-blue flex justify-evenly w-32 cursor-pointer">
+        <button onClick={() => console.log("Clicked")} className=" text-blue flex justify-evenly w-32 h-12 items-center cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className=" h-6 w-6"
@@ -88,20 +84,8 @@ const Contact: NextPage = () => {
         </button>
         </Link>
       </div>
-
-      <footer className="flex justify-between items-end w-full absolute bottom-0 pb-2">
-        <div className="flex flex-col space-y-8 pl-12 pb-4">
-          <div className="flex justify-evenly">
-            <Image className="ml-4" src={facebook} alt="facebook" />
-            <Image className="ml-4" src={twitter} alt="twitter" />
-            <Image className="ml-4" src={insta} alt="instagram" />
-          </div>
-          <p className="text-black/50 text-xs">
-            &copy; 2022 AFAK TANZANIA COMPANY LTD
-          </p>
-        </div>
-        <Image src={pattern2} alt="pattern" width={150} height={220} />
-      </footer>
+      </main>
+<Footer/>
     </div>
   );
 };

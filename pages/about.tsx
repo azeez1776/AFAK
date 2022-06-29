@@ -3,11 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import brand from "../public/brand.png";
-import facebook from "../public/facebook.svg";
-import insta from "../public/insta.svg";
-import twitter from "../public/twitter.svg";
-import pattern2 from "../public/pattern2.png";
 import download from "../public/download.svg";
 
 const About: NextPage = () => {
@@ -23,22 +20,25 @@ const About: NextPage = () => {
         <Header />
         <div className="flex justify-between items-start w-11/12">
           <Image src={brand} alt="brand" width={350} height={200} />
-          <div className="flex flex-col space-y-8 w-2/5">
-            <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-8 w-3/5">
+            <div className="text-sm flex flex-col space-y-2">
               <div className="flex flex-row">
                 <div className="border-t-2 border-blue w-8 h-1 my-auto mx-2"></div>
-                <p className="text-blue text-sm font-bold">Get to Know Us</p>
+                <p className="text-blue font-bold">Get to Know Us</p>
               </div>
-              <p className="text-lg font-normal">
-                We are an Innovative firm based in Dar es Salaam, Tanzania. Our
-                main focus is developing digital solutions for the community and
-                businesses.
+              <p className="font-normal">
+              As a highly diversified group, our primary objective is to satisfy our client's needs. Our success in achieving this is measured by our client's perception of the seamless execution and achieving the highest level of readiness, communication, quality and safety to our clients. 
               </p>
-              <p className=" text-lg font-normal">
-                We have a range of digital solutions starting from UI/UX Design,
-                Web design, Software Developmnet, Mobile App Development and
-                Linux System Administration
+              <p className="font-normal">
+              We deal in: 
               </p>
+              <ul>
+                <li>Logistics</li>
+                <li>Mining</li>
+                <li>Supply of Construction Material </li>
+                <li>Real Estate </li>
+                <li>Software Agency</li>
+              </ul>
             </div>
             <button className="bg-blue text-white font-bold text-lg rounded-full w-64 h-12 flex justify-evenly items-center cursor-pointer">
               <Image src={download} alt="download" />
@@ -69,19 +69,7 @@ const About: NextPage = () => {
         </Link>
       </div>
 
-      <footer className="flex justify-between items-end w-full absolute bottom-0 pb-2 z-0">
-        <div className="flex flex-col space-y-8 pl-12 pb-4">
-          <div className="flex justify-evenly">
-            <Image className="ml-4" src={facebook} alt="facebook" />
-            <Image className="ml-4" src={twitter} alt="twitter" />
-            <Image className="ml-4" src={insta} alt="instagram" />
-          </div>
-          <p className="text-black/50 text-xs">
-            &copy; 2022 AFAK TANZANIA COMPANY LTD
-          </p>
-        </div>
-        <Image src={pattern2} alt="pattern" width={150} height={220} />
-      </footer>
+     <Footer/>
     </div>
   );
 };

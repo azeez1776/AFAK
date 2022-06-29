@@ -20,9 +20,9 @@ const  contact =  async (req:any, res:any) => {
     const mailData = { 
       from: req.body.email,
       to: process.env.email,
-      subject: `Message From ${req.body.name}`,
-      text: req.body.message + " | Sent from: " + req.body.email,
-      html: `<div>${req.body.message}</div><p>Sent from:
+      subject: `Message From ${req.body.email}`,
+      text: "Hello" + " | Sent from: " + req.body.email,
+      html: `<div>Hello there</div><p>Sent from:
       ${req.body.email}</p>`
     }
 
