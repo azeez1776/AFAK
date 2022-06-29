@@ -6,8 +6,9 @@ const  contact =  async (req:any, res:any) => {
 
     //Gmail service
     const transporter = nodemailer.createTransport({
-      service:'Gmail',
-
+        host:'afaktanzania.co.tz/',
+        port:465,
+        secure:true,
       //Email and password in the .env file
       auth: {
         user: process.env.email, 

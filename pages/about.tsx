@@ -29,7 +29,7 @@ const About: NextPage = () => {
               <p className="font-normal">
               As a highly diversified group, our primary objective is to satisfy our client's needs. Our success in achieving this is measured by our client's perception of the seamless execution and achieving the highest level of readiness, communication, quality and safety to our clients. 
               </p>
-              <p className="font-normal">
+              <p className="font-bold ">
               We deal in: 
               </p>
               <ul>
